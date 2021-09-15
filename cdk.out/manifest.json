@@ -1,0 +1,415 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Spaces.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Spaces.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Spaces": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Spaces.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/da8a5db0dde8a6f0ee5489b73d025e1b7814762eee1d9d4062193aca3149502b.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Spaces.assets"
+        ]
+      },
+      "dependencies": [
+        "Spaces.assets"
+      ],
+      "metadata": {
+        "/Spaces/spaces-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapiAB4C455E"
+          }
+        ],
+        "/Spaces/spaces-api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapiCloudWatchRoleA5372273"
+          }
+        ],
+        "/Spaces/spaces-api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapiAccountC1B8D786"
+          }
+        ],
+        "/Spaces/spaces-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapiDeployment6B038E17cca0da824b65bf4d1339994303d61c1e"
+          }
+        ],
+        "/Spaces/spaces-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapiDeploymentStageprod48753277"
+          }
+        ],
+        "/Spaces/spaces-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapiEndpoint68932D14"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispaces1F8DEB41"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/POST/ApiPermission.SpacesspacesapiBD7BCCE8.POST..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesPOSTApiPermissionSpacesspacesapiBD7BCCE8POSTspaces8EF188DB"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/POST/ApiPermission.Test.SpacesspacesapiBD7BCCE8.POST..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesPOSTApiPermissionTestSpacesspacesapiBD7BCCE8POSTspacesF7AB5F16"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesPOST4DC0C6DB"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/GET/ApiPermission.SpacesspacesapiBD7BCCE8.GET..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesGETApiPermissionSpacesspacesapiBD7BCCE8GETspacesE6D6C3CE"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/GET/ApiPermission.Test.SpacesspacesapiBD7BCCE8.GET..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesGETApiPermissionTestSpacesspacesapiBD7BCCE8GETspaces1F29D0B2"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesGET074F4FCC"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/PATCH/ApiPermission.SpacesspacesapiBD7BCCE8.PATCH..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesPATCHApiPermissionSpacesspacesapiBD7BCCE8PATCHspaces8E7900A4"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/PATCH/ApiPermission.Test.SpacesspacesapiBD7BCCE8.PATCH..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesPATCHApiPermissionTestSpacesspacesapiBD7BCCE8PATCHspacesD3EB2D6E"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/PATCH/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesPATCH0A38041D"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/DELETE/ApiPermission.SpacesspacesapiBD7BCCE8.DELETE..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesDELETEApiPermissionSpacesspacesapiBD7BCCE8DELETEspaces9E2F9E6E"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/DELETE/ApiPermission.Test.SpacesspacesapiBD7BCCE8.DELETE..spaces": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesDELETEApiPermissionTestSpacesspacesapiBD7BCCE8DELETEspaces283ABE4D"
+          }
+        ],
+        "/Spaces/spaces-api/Default/spaces/DELETE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesapispacesDELETE690FA490"
+          }
+        ],
+        "/Spaces/SpacesTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "SpacesTable8A997355"
+            }
+          }
+        ],
+        "/Spaces/SpacesTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTable8A997355"
+          }
+        ],
+        "/Spaces/SpacesTable-Create/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableCreateServiceRoleE49CA3B4"
+          }
+        ],
+        "/Spaces/SpacesTable-Create/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableCreateServiceRoleDefaultPolicy308B2E77"
+          }
+        ],
+        "/Spaces/SpacesTable-Create/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableCreate125CEC52"
+          }
+        ],
+        "/Spaces/SpacesTable-Read/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableReadServiceRoleDC90AD04"
+          }
+        ],
+        "/Spaces/SpacesTable-Read/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableReadServiceRoleDefaultPolicyEAD1E3B1"
+          }
+        ],
+        "/Spaces/SpacesTable-Read/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableReadC88C4D14"
+          }
+        ],
+        "/Spaces/SpacesTable-Update/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableUpdateServiceRoleC28CF914"
+          }
+        ],
+        "/Spaces/SpacesTable-Update/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableUpdateServiceRoleDefaultPolicy36B2545A"
+          }
+        ],
+        "/Spaces/SpacesTable-Update/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableUpdate931099D2"
+          }
+        ],
+        "/Spaces/SpacesTable-Delete/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableDeleteServiceRoleE51C080F"
+          }
+        ],
+        "/Spaces/SpacesTable-Delete/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableDeleteServiceRoleDefaultPolicy036F0FB4"
+          }
+        ],
+        "/Spaces/SpacesTable-Delete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTableDeleteD71428D7"
+          }
+        ],
+        "/Spaces/spaces-photos/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesphotos2389D37E"
+          }
+        ],
+        "/Spaces/spaces-photos-bucket-name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesphotosbucketname"
+          }
+        ],
+        "/Spaces/SpacesUserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesUserPool5D732F45"
+          }
+        ],
+        "/Spaces/SpacesUserPool/SpacesUserPool-Client/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesUserPoolSpacesUserPoolClient19A6F663"
+          }
+        ],
+        "/Spaces/UserPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolId"
+          }
+        ],
+        "/Spaces/UserPoolClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolClientId"
+          }
+        ],
+        "/Spaces/SpaceUserAuthorizer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceUserAuthorizer401AE1AA"
+          }
+        ],
+        "/Spaces/SpacesIdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesIdentityPool"
+          }
+        ],
+        "/Spaces/IdentityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IdentityPoolId"
+          }
+        ],
+        "/Spaces/CognitoDefaultAuthenticatedRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CognitoDefaultAuthenticatedRoleC5D5C31E"
+          }
+        ],
+        "/Spaces/CognitoDefaultUnauthenticatedRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CognitoDefaultUnauthenticatedRoleABBF7267"
+          }
+        ],
+        "/Spaces/CognitoAdminRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CognitoAdminRole4C10FBA4"
+          }
+        ],
+        "/Spaces/CognitoAdminRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CognitoAdminRoleDefaultPolicyBC6192E4"
+          }
+        ],
+        "/Spaces/RolesAttatchment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RolesAttatchment"
+          }
+        ],
+        "/Spaces/admin": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "admin"
+          }
+        ],
+        "/Spaces/spaces-app-web/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesappwebD4F33662"
+          }
+        ],
+        "/Spaces/spaces-app-web/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesappwebPolicy86670A19"
+          }
+        ],
+        "/Spaces/space-app-web-deployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceappwebdeploymentAwsCliLayer98282FF9"
+          }
+        ],
+        "/Spaces/space-app-web-deployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceappwebdeploymentCustomResource9B7FB553"
+          }
+        ],
+        "/Spaces/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/Spaces/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/Spaces/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/Spaces/spacesWebAppS3Url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesWebAppS3Url"
+          }
+        ],
+        "/Spaces/spaces-app-cloudfront-dist/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesappcloudfrontdistCFDistribution78EB6F3C"
+          }
+        ],
+        "/Spaces/spacesWebAppCloudFrontUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spacesWebAppCloudFrontUrl"
+          }
+        ],
+        "/Spaces/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Spaces/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Spaces/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Spaces/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Spaces"
+    }
+  }
+}
